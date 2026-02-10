@@ -1,0 +1,315 @@
+/* ============================= Global Styles ========================================== */
+/* Reset margin, padding, box-sizing, and set default font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* Body styles: full height, background, and layout setup */
+body {
+    background-color: #f0f2f5;
+    width: 100%;
+    min-height: 100vh;   /* allow natural scroll */
+    margin: 0;
+    display: flex;
+    flex-direction: column;   /* stack content + footer */
+    align-items: center;
+}
+/* ============================== Login/Register Container =========================== */
+/* Main container for login or registration forms */
+.login-container {
+    background-color: #fff;
+    width: 480px;
+    padding: 40px 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 50px;    /* normal top margin */
+    margin-bottom: 100px; /* push footer down */
+}
+/* ============================ Create Account Button =============================== */
+/* Styling for 'Create Account' button */
+.login-container .fb-create-account,
+.login-container .fb-create-account {
+    display: block;
+    width: 50%;
+    max-width: 320px;        /* friendly width on desktop */
+    margin: 15px auto 0;     /* center it */
+    background-color: #42b72a;
+    color: #ffffff;          /* ensure white text */
+    text-align: center;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.18s ease;
+}
+
+/* Login Effect For Create Account Button */
+.login-container .fb-create-account:hover,
+.login-container .fb-create-account:hover {
+    background-color: #36a420;
+    color: #ffffff;
+}
+/* ============================== Links ====================================== */
+/* Styling for links inside login container */
+.login-container a {
+    display: inline-block;
+    margin-top: 12px;
+    text-decoration: none;
+    color: #1877f2;
+    font-size: 14px;
+    transition: color 0.3s ease;
+    margin-bottom: 20px;
+}
+/* ============================== Form container =========================== */
+.auth-form {
+    margin-bottom: 18px;
+    text-align: left;
+}
+/* ============================== Form labels ============================== */
+.form-label {
+    display: block;
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 6px;
+    color: #333;
+}
+/* ================================ Input Fields ============================ */
+/* Text, email, password and file inputs */
+.auth-form input[type="text"],
+.auth-form input[type="email"],
+.auth-form input[type="password"],
+.auth-form input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccd0d5;
+    background-color: #f5f6f7;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+/* ================================= Input focus effect ======================= */
+.auth-form input:focus {
+    border-color: #1877f2;
+    background-color: #fff;
+    outline: none;
+}
+/* ================================= Submit Button ============================ */
+/* Styling for submit buttons in forms */
+.auth-form input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #1877f2;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+/* Hover effect for submit button */
+.auth-form input[type="submit"]:hover {
+    background-color: #166fe5;
+}
+/* ================================ Image ==================================== */
+img {
+    height: 140px;
+    width: 130px;
+}
+/* ================================ Success & Fail Messages ================== */
+/* Success message */
+.success-login {
+    color: #2e7d32;
+    background-color: #c8e6c9;
+    padding: 8px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+/* ================================ Failure message ========================== */
+.fail-login {
+    color: #b71c1c;
+    background-color: #ffcdd2;
+    padding: 8px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    animation: fadeOut 3s ease-in-out forwards;
+}
+/* ============================== Input Error Styles ========================= */
+/* Wrapper for inputs to display error icon */
+.input-wrapper {
+    position: relative;
+}
+/* ============================== Inputs inside wrapper ======================== */
+.input-wrapper input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccd0d5;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+/* ============================= Error state for input ======================= */
+.input-wrapper.error input {
+    border-color: #e53935;  /* red border on error */
+}
+/* ============================== Error icon for inputs ========================= */
+.error-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #e53935;  /* red circle */
+    color: #fff;                 /* white exclamation mark */
+    font-weight: bold;
+    font-size: 14px;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 50%;          /* makes it a circle */
+    pointer-events: none;
+    animation: fadeOut 3s ease-in-out forwards;
+}
+/* ========================= Error text ================================== */
+.error {
+    color : #ff0000;
+}
+/* ========================= Register bottom ============================== */
+/* Footer section below registration form */
+.register-bottom {
+    text-align: center;
+    border-top: 1px solid #555;
+    padding: 15px;
+    font-size: 13px;
+}
+/* ========================== Password Field & Eye Icon ==================== */
+/* Wrapper for password input + eye icon */
+.password-wrapper {
+    position: relative;
+    width: 100%;
+}
+/* ======================== Eye Icon (Show / Hide Password) ================= */
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    top: 65%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #555;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+/* ========================== Hover effect for toggle ========================= */
+.toggle-password:hover {
+    color: #000;
+}
+/* ================== Password input styles (with space for icon) =============== */
+.password-wrapper input[type="password"] {
+    width: 100%;
+    padding: 12px 40px 12px 12px; /* Room for icon */
+    border: 1px solid #ccd0d5;
+    border-radius: 6px;
+    background-color: #f5f6f7;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+/* ===================== Password focus state =============================== */
+.password-wrapper input:focus {
+    border-color: #1877f2;
+    background-color: #fff;
+    outline: none;
+}
+/* ============================== Footer ======================================== */
+/* Main footer background and text */
+.footer {
+    background: linear-gradient(90deg, #0d6efd, #0dcaf0);
+    color: white;
+    text-align: center;
+    padding: 30px 30px 30px 39px;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.2);
+}
+/* =============================== Main site footer container ================== */
+.site-footer {
+    position: relative; /* or fixed if you want it always at bottom */
+    bottom: 0;
+    top: 190px;
+    width: 100%;
+    background: linear-gradient(90deg, #0d6efd, #0dcaf0);
+    color: #fff;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+}
+/* =========================== Footer content wrapper ======================= */
+.footer-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* ========================== Top section with footer columns ================ */
+.footer-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+/* =========================== Individual footer column =================== */
+.footer-column {
+    flex: 1 1 250px; /* responsive columns */
+    margin: 10px;
+}
+/* =========================== Footer column heading ===================== */
+.footer-column h4 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+/* ========================== Footer text, links, and lists ============ */
+.footer-column p,
+.footer-column ul,
+.footer-column a {
+    font-size: 14px;
+    color: #fff;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+/* ========================== Footer list reset ===================== */
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+/* ========================== Footer list item spacing ================== */
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+/* ========================== Footer link hover effect =================== */
+.footer-column a:hover {
+    color: #007BFF;
+}
+/* ========================== Footer icon spacing ========================= */
+.footer-column i {
+    margin-right: 8px;
+}
+/* ========================== Footer bottom copyright section ================ */
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #555;
+    padding: 15px;
+    font-size: 13px;
+}
+/*========================== Responsive for small screens ================= */
+@media (max-width: 768px) {
+    .footer-top {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-column {
+        margin: 15px auto;
+        text-align: center;
+    }
+}

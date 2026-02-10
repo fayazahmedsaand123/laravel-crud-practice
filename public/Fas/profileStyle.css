@@ -1,0 +1,140 @@
+/* ============================= General Body =============================== */
+/* ==== Reset margins, set font, background, and spacing for navbar ==== */
+body {
+    margin: 0;
+    padding: 0;
+    padding-top: 80px; /* Adjust based on navbar height */
+    font-family: Arial, sans-serif;
+    background-color: #f5f6fa;
+    color: #333;
+}
+/* =========================== Navbar ====================================== */
+/* ======== Main navbar container fixed at top ======== */
+.user-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2c3e50;
+    padding: 10px 20px;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 99%;
+    z-index: 999;
+}
+/* ======================= Navbar layouts: left, center, right =============== */
+.navbar-left,
+.navbar-center,
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+/* ====================== Navbar left Logo styling in navbar ================== */
+.navbar-left img.logo-img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    object-fit: cover;
+}
+/* ======================== Navbar Center section for home button ==================== */
+.navbar-center {
+    flex: 1;
+    justify-content: center;
+}
+/* ================= Navbar Right section spacing for icons/buttons ==================== */
+.navbar-right {
+    gap: 20px;
+}
+/* ========================== Navbar Links ========================================== */
+.user-navbar .nav-link {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+/* ============================ Navbar link hover effect ============================ */
+.user-navbar .nav-link:hover {
+    background-color: #34495e;
+}
+/* ============================ Navbar Dropdown styling ============================= */
+.navbar-right select {
+    background: #fff;
+    color: #0d6efd;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 8px;
+    cursor: pointer;
+}
+/* ============================ Profile image in navbar =========================== */
+.image-profile {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    object-fit: cover;
+}
+/* ========================= Profile Container =================================== */
+/* =========== Main container for profile content ================ */
+.profile-container {
+    width: 40%;
+    background: #fff;
+    margin: auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.15);
+    text-align: center;
+}
+/* ========================= Profile Image ======================================= */
+/* ========== Large profile image inside profile card ============== */
+.profile-image {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 4px solid #1877f2; /* Facebook blue border */
+    object-fit: cover;
+}
+/* ========================= Profile Heading ==================================== */
+h2 {
+    color: #1877f2; /* Facebook blue */
+    margin-bottom: 20px;
+}
+/* ========================= Info Box ========================================== */
+/* ======== Individual info boxes (e.g., name, email, phone) ========== */
+.info-box {
+    background: #f0f2f5;
+    padding: 12px;
+    border-radius: 10px;
+    margin: 10px 0;
+    text-align: left;
+}
+/* ============================ Icon inside info box =============================== */
+.info-box i {
+    color: #1877f2;
+    margin-right: 8px;
+}
+/* ======================== Text inside info box ==================================== */
+.info-text {
+    font-size: 18px;
+    color: #333;
+}
+/* ============================== Back Button ======================================== */
+/* ================ Go back / navigation button ======================= */
+.back-btn {
+    margin-top: 20px;
+    display: inline-block;
+    background: #1877f2;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+/* ============================= Hover effect for back button ============================= */
+.back-btn:hover {
+    background: #145db2;
+}
