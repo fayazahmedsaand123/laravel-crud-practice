@@ -34,7 +34,8 @@ A Laravel practice project covering multiple modules with full CRUD functionalit
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/fayazahmedsaand123/Laravel_Foregin.git
+git clone https://github.com/fayazahmedsaand123/laravel-crud-practice.git
+cd laravel-crud-practice
 
 # 2. Navigate to project folder
 cd Laravel_Foregin
