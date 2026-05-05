@@ -38,7 +38,7 @@ git clone https://github.com/fayazahmedsaand123/laravel-crud-practice.git
 cd laravel-crud-practice
 
 # 2. Navigate to project folder
-cd Laravel_Foregin
+cd laravel-crud-practice
 
 # 3. Install dependencies
 composer install
